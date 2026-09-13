@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Federico Jacobo — IT Support | Manual QA | Game Testing</title>
+    <meta
+      name="description"
+      content="Federico Jacobo — IT Support, Manual QA and Game Testing portfolio."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="logo" aria-label="Federico Jacobo home">
+          FJ<span>.</span>QA
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-switcher" aria-label="Language selector">
+            <button class="lang-button active" data-lang="en">EN</button>
+            <span>/</span>
+            <button class="lang-button" data-lang="es">ES</button>
+          </div>
+
+          <a
+            href="mailto:fede.jacobo@protonmail.com"
+            class="header-contact"
+            data-i18n="nav.contactButton"
+          >
+            Contact
+          </a>
+
+          <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================= HOME ================= -->
+
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">
+              <span class="status-dot"></span>
+              <span data-i18n="hero.status">AVAILABLE FOR WORK</span>
+            </div>
+
+            <p class="location-line">Córdoba, Argentina</p>
+
+            <h1 data-i18n="hero.title">
+              IT Support <span>|</span> Manual QA <span>|</span> Game Testing
+            </h1>
+
+            <p class="hero-description" data-i18n="hero.description">
+              Higher Technician in Software Quality Assurance with professional
+              experience in Level 1 Technical Support and practical training in
+              Manual QA and Game Testing.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="button button-primary">
+                <span data-i18n="hero.projectsButton">View Projects</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </a>
+
+              <a href="#experience" class="button button-secondary">
+                <span data-i18n="hero.experienceButton">View Experience</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric">
+                <strong>L1</strong>
+                <span data-i18n="hero.metricSupport">Technical Support</span>
+              </div>
+
+              <div class="metric">
+                <strong>QA</strong>
+                <span data-i18n="hero.metricQA">Manual Testing</span>
+              </div>
+
+              <div class="metric">
+                <strong>B2</strong>
+                <span data-i18n="hero.metricEnglish">English</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile card -->
+
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-card-top">
+                <span>profile.json</span>
+                <span class="file-status">●</span>
+              </div>
+
+              <div class="profile-photo-wrapper">
+                <div class="profile-placeholder" id="profilePlaceholder">
+                  FJ
+                </div>
+
+                <img
+                  src="assets/images/profile.JPG"
+                  alt="Federico Jacobo"
+                  class="profile-photo"
+                  id="profilePhoto"
+                />
+              </div>
+
+              <div class="profile-code">
+                <pre><code><span class="code-keyword">const</span> federico = {
+  name: <span class="code-string">"Federico Jacobo"</span>,
+  location: <span class="code-string">"Córdoba, AR"</span>,
+  focus: [
+    <span class="code-string">"IT Support"</span>,
+    <span class="code-string">"Manual QA"</span>,
+    <span class="code-string">"Game Testing"</span>
+  ],
+  english: <span class="code-string">"B2"</span>
+};</code></pre>
+              </div>
+
+              <div class="profile-status">
+                <span class="status-dot"></span>
+                <span data-i18n="hero.profileStatus">OPEN TO WORK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= AREAS ================= -->
+
+      <section class="areas-section section-small">
+        <div class="container">
+          <div class="section-label">
+            <span>01</span>
+            <span data-i18n="areas.label">MAIN AREAS</span>
+          </div>
+
+          <div class="areas-grid">
+            <article class="area-card">
+              <span class="material-symbols-outlined">support_agent</span>
+              <div>
+                <h3 data-i18n="areas.support.title">IT Support</h3>
+                <p data-i18n="areas.support.text">
+                  Level 1 technical support, incident handling, troubleshooting
+                  and remote monitoring.
+                </p>
+              </div>
+            </article>
+
+            <article class="area-card">
+              <span class="material-symbols-outlined">bug_report</span>
+              <div>
+                <h3 data-i18n="areas.qa.title">Manual QA</h3>
+                <p data-i18n="areas.qa.text">
+                  Test cases, functional testing, exploratory testing,
+                  compatibility and technical documentation.
+                </p>
+              </div>
+            </article>
+
+            <article class="area-card">
+              <span class="material-symbols-outlined">sports_esports</span>
+              <div>
+                <h3 data-i18n="areas.game.title">Game Testing</h3>
+                <p data-i18n="areas.game.text">
+                  Practical testing of a WebGL FPS game across browsers and
+                  different PC configurations.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="section-label">
+                <span>02</span>
+                <span data-i18n="projects.label">PROJECTS</span>
+              </div>
+
+              <h2 data-i18n="projects.title">Manual QA Case Study</h2>
+            </div>
+
+            <p data-i18n="projects.intro">
+              A real academic QA project with documented planning, execution and
+              results.
+            </p>
+          </div>
+
+          <article class="project-card">
+            <div class="project-header">
+              <div>
+                <span class="project-type" data-i18n="project.type">
+                  MANUAL QA / GAME TESTING
+                </span>
+
+                <h3>Nazi Zombies: Portable</h3>
+
+                <p class="project-subtitle" data-i18n="project.subtitle">
+                  Manual QA Testing
+                </p>
+              </div>
+
+              <span class="project-number">01</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-description">
+                <p data-i18n="project.description">
+                  Manual QA project developed during my professional training at
+                  Teclab Instituto Técnico Superior. The objective was to test a
+                  WebGL FPS game through functional, exploratory, UI, usability,
+                  compatibility and basic performance testing.
+                </p>
+
+                <div class="tag-list">
+                  <span>Functional Testing</span>
+                  <span>Exploratory Testing</span>
+                  <span>UI Testing</span>
+                  <span>Usability Testing</span>
+                  <span>Compatibility</span>
+                  <span>Game Testing</span>
+                </div>
+              </div>
+
+              <div class="project-results">
+                <div class="result">
+                  <strong>32 / 32</strong>
+                  <span data-i18n="project.results.cases">
+                    Test cases passed
+                  </span>
+                </div>
+
+                <div class="result">
+                  <strong>0</strong>
+                  <span data-i18n="project.results.fail">
+                    Failed test cases
+                  </span>
+                </div>
+
+                <div class="result">
+                  <strong>3</strong>
+                  <span data-i18n="project.results.browsers">
+                    Browsers tested
+                  </span>
+                </div>
+
+                <div class="result">
+                  <strong>2</strong>
+                  <span data-i18n="project.results.devices">
+                    PC configurations
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-environments">
+              <div class="environment">
+                <div class="environment-title">
+                  <span class="material-symbols-outlined">computer</span>
+                  <span>Gigabyte G5 MD</span>
+                </div>
+
+                <p>Intel i5-11400H · RTX 3050 Ti 4GB · 40GB RAM · Windows 11</p>
+              </div>
+
+              <div class="environment">
+                <div class="environment-title">
+                  <span class="material-symbols-outlined">computer</span>
+                  <span>Positivo BGH AT550</span>
+                </div>
+
+                <p>Celeron N3350 · Intel HD 500 · 4GB RAM · Windows 10</p>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="documentation-title">
+                <span class="material-symbols-outlined">description</span>
+                <span data-i18n="project.docsTitle"> Documentation </span>
+              </div>
+
+              <div class="documentation-links">
+                <a
+                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="project.docs.repository">
+                    QA Repository
+                  </span>
+                  <span class="material-symbols-outlined">open_in_new</span>
+                </a>
+
+                <a
+                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/01-test-plan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Test Plan
+                </a>
+
+                <a
+                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/03-test-cases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Test Cases
+                </a>
+
+                <a
+                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/05-test-execution"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Test Execution
+                </a>
+
+                <a
+                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/06-test-summary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Test Summary
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= EXPERIENCE ================= -->
+
+      <section class="section section-alt" id="experience">
+        <div class="container">
+          <div class="section-label">
+            <span>03</span>
+            <span data-i18n="experience.label">EXPERIENCE</span>
+          </div>
+
+          <div class="section-heading simple-heading">
+            <h2 data-i18n="experience.title">Professional Experience</h2>
+          </div>
+
+          <article class="experience-item featured-experience">
+            <div class="experience-date">
+              <span>SEP 2025</span>
+              <span>—</span>
+              <span>DEC 2025</span>
+            </div>
+
+            <div class="experience-main">
+              <div class="experience-title-row">
+                <div>
+                  <span
+                    class="experience-role"
+                    data-i18n="experience.robotic.role"
+                  >
+                    Roboteer | Level 1 Technical Support
+                  </span>
+
+                  <h3>Robotic Crew</h3>
+
+                  <p data-i18n="experience.robotic.meta">Remote · Contractor</p>
+                </div>
+
+                <span class="experience-badge">L1</span>
+              </div>
+
+              <p
+                class="experience-description"
+                data-i18n="experience.robotic.description"
+              >
+                Remote monitoring and Level 1 technical support for autonomous
+                industrial floor-cleaning robots. I analyzed operational alerts,
+                followed troubleshooting procedures, attempted allowed recovery
+                actions, tracked incidents and documented actions for shift
+                continuity.
+              </p>
+
+              <div class="experience-tasks">
+                <span>InOrbit</span>
+                <span>Jira</span>
+                <span>Opsgenie</span>
+                <span>Confluence</span>
+                <span>Slack</span>
+                <span>Remote Monitoring</span>
+                <span>Troubleshooting</span>
+                <span>Incident Management</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="additional-experience">
+            <h3 data-i18n="experience.additional.title">
+              Additional Experience
+            </h3>
+
+            <div class="additional-grid">
+              <article>
+                <span class="additional-year">2024–2026</span>
+                <h4 data-i18n="experience.additional.barman.title">Barman</h4>
+                <p data-i18n="experience.additional.barman.text">
+                  Events and gastronomy, including Cosquín Rock.
+                </p>
+              </article>
+
+              <article>
+                <span class="additional-year">2022</span>
+                <h4 data-i18n="experience.additional.msi.title">
+                  Warehouse Assistant
+                </h4>
+                <p data-i18n="experience.additional.msi.text">
+                  MSI Argentina — warehouse and material handling.
+                </p>
+              </article>
+
+              <article>
+                <span class="additional-year">2019</span>
+                <h4 data-i18n="experience.additional.flexcel.title">
+                  Customer Service
+                </h4>
+                <p data-i18n="experience.additional.flexcel.text">
+                  Flexcel — customer service and cellphone-related tasks.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-label">
+            <span>04</span>
+            <span data-i18n="skills.label">SKILLS</span>
+          </div>
+
+          <div class="section-heading">
+            <h2 data-i18n="skills.title">Technical Skills</h2>
+
+            <p data-i18n="skills.intro">
+              Knowledge levels are shown to distinguish practical experience
+              from academic or introductory knowledge.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- IT SUPPORT -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">build</span>
+                <h3 data-i18n="skills.support.title">IT Support</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>Windows</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Windows Installation</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Hardware</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>PC Assembly</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Linux</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Virtual Machines</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Android</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>iOS</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+              </div>
+            </article>
+
+            <!-- NETWORKING -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">lan</span>
+                <h3 data-i18n="skills.network.title">Networking</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>IP</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>DNS</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>DHCP</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>TCP/IP</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Wi-Fi</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>Routers</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>VPN</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Network Troubleshooting</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+              </div>
+            </article>
+
+            <!-- QA -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">bug_report</span>
+                <h3 data-i18n="skills.qa.title">Manual QA</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>Manual Testing</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Test Case Design</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Test Case Execution</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Functional Testing</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Exploratory Testing</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>UI / Usability Testing</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>Browser Compatibility</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>Game Testing</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- TOOLS -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">terminal</span>
+                <h3 data-i18n="skills.tools.title">Tools</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>Jira</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Opsgenie</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>InOrbit</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Confluence</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>Excel / Google Sheets</span>
+                  <strong data-level="basic-intermediate"
+                    >Basic / Intermediate</strong
+                  >
+                </div>
+
+                <div class="skill-row">
+                  <span>Browser DevTools</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Git / GitHub</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROGRAMMING -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">code</span>
+                <h3 data-i18n="skills.programming.title">Programming</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>C#</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Python</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>HTML</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>CSS</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>JavaScript</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>SQL</span>
+                  <strong data-level="basic">Basic</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>APIs</span>
+                  <strong data-level="introductory">Introductory</strong>
+                </div>
+              </div>
+            </article>
+
+            <!-- OTHER -->
+
+            <article class="skill-category">
+              <div class="skill-category-header">
+                <span class="material-symbols-outlined">school</span>
+                <h3 data-i18n="skills.other.title">Other</h3>
+              </div>
+
+              <div class="skill-list">
+                <div class="skill-row">
+                  <span>Technical Documentation</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>SOP / Procedures</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Incident Management</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Remote Monitoring</span>
+                  <strong data-level="intermediate">Intermediate</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>English</span>
+                  <strong data-level="b2">B2</strong>
+                </div>
+
+                <div class="skill-row">
+                  <span>Portuguese</span>
+                  <strong data-level="a1">A1</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="skill-levels">
+            <span data-i18n="skills.levels">
+              Levels: Introductory · Basic · Intermediate · Advanced · Expert
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION ================= -->
+
+      <section class="section section-alt" id="education">
+        <div class="container">
+          <div class="section-label">
+            <span>05</span>
+            <span data-i18n="education.label">EDUCATION</span>
+          </div>
+
+          <div class="section-heading simple-heading">
+            <h2 data-i18n="education.title">Education</h2>
+          </div>
+
+          <div class="education-list">
+            <article class="education-item education-current">
+              <div class="education-year">2023–2026</div>
+
+              <div class="education-content">
+                <span class="education-status" data-i18n="education.completed">
+                  COMPLETED
+                </span>
+
+                <h3 data-i18n="education.teclab.title">
+                  Higher Technician in Software Quality Assurance
+                </h3>
+
+                <p>Teclab Instituto Técnico Superior</p>
+
+                <span
+                  class="education-detail"
+                  data-i18n="education.teclab.detail"
+                >
+                  Completed August 2026
+                </span>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <div class="education-year">2025</div>
+
+              <div class="education-content">
+                <span
+                  class="education-status incomplete"
+                  data-i18n="education.incomplete"
+                >
+                  INCOMPLETE
+                </span>
+
+                <h3 data-i18n="education.upc.title">
+                  University Technician in Video Game Development and Production
+                </h3>
+
+                <p>Universidad Provincial de Córdoba</p>
+              </div>
+            </article>
+
+            <article class="education-item">
+              <div class="education-year">2017–2019</div>
+
+              <div class="education-content">
+                <span
+                  class="education-status incomplete"
+                  data-i18n="education.incomplete"
+                >
+                  INCOMPLETE
+                </span>
+
+                <h3 data-i18n="education.ies.title">
+                  Virtual Simulations and Video Games
+                </h3>
+
+                <p>Colegio Universitario IES</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="section-label">
+              <span>06</span>
+              <span data-i18n="contact.label">CONTACT</span>
+            </div>
+
+            <h2 data-i18n="contact.title">Let's talk about technical work.</h2>
+
+            <p data-i18n="contact.text">
+              I am interested in IT Support, Manual QA, Game Testing, Monitoring
+              and other junior technical roles.
+            </p>
+
+            <div class="contact-actions">
+              <a
+                href="mailto:fede.jacobo@protonmail.com"
+                class="button button-primary"
+              >
+                <span>fede.jacobo@protonmail.com</span>
+                <span class="material-symbols-outlined">mail</span>
+              </a>
+
+              <a
+                href="https://github.com/federicojacobo02"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-secondary"
+              >
+                <span>GitHub</span>
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>FJ<span>.</span>QA</strong>
+          <p data-i18n="footer.description">
+            IT Support · Manual QA · Game Testing
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="mailto:fede.jacobo@protonmail.com"> Email </a>
+
+          <a
+            href="https://github.com/federicojacobo02"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+
+        <div class="footer-copy">© 2026 Federico Jacobo</div>
+      </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
