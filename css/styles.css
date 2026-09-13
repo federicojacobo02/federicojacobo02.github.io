@@ -7,7 +7,7 @@
 /* ================= VARIABLES ================= */
 
 :root {
-    --bg: #101415;
+    --bg: #000000;
     --bg-soft: #141819;
     --surface: #191c1e;
     --surface-2: #1d2123;
@@ -36,8 +36,7 @@
     --shadow:
         0 20px 50px rgba(0, 0, 0, 0.25);
 
-    --transition:
-        180ms ease;
+    --transition;
 }
 
 
@@ -659,7 +658,7 @@ p {
 
     padding: 30px;
 
-    background: var(--bg);
+    background: var(--surface);
 
     transition: background var(--transition);
 }
@@ -885,9 +884,8 @@ p {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 45px;
-
-    padding: 35px 0;
-
+    padding: 35px;
+    background: var(--surface);
     border-top: 1px solid var(--border);
 }
 
@@ -989,7 +987,7 @@ p {
     min-height: 170px;
     padding: 25px;
 
-    background: var(--bg);
+    background: var(--surface);
 }
 
 .additional-year {
@@ -1122,8 +1120,8 @@ p {
     grid-template-columns: 180px 1fr;
     gap: 45px;
 
-    padding: 32px 0;
-
+    padding: 32px;
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
 }
 
