@@ -1,968 +1,1309 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```html
+<!DOCTYPE html>
+<html lang="es" class="dark">
 
-    <title>Federico Jacobo — IT Support | Manual QA | Game Testing</title>
-    <meta
-      name="description"
-      content="Federico Jacobo — IT Support, Manual QA and Game Testing portfolio."
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title data-i18n="meta.title">
+        Federico Jacobo | IT Support | Manual QA
+    </title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
-    />
+    <meta name="description"
+        content="Portfolio de Federico Jacobo. Soporte Técnico IT, QA Manual, Technical Operations y Monitoring.">
 
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <body>
-    <!-- ================= HEADER ================= -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="#home" class="logo" aria-label="Federico Jacobo home">
-          FJ<span>.</span>QA
-        </a>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#home" data-i18n="nav.home">Home</a>
-          <a href="#projects" data-i18n="nav.projects">Projects</a>
-          <a href="#experience" data-i18n="nav.experience">Experience</a>
-          <a href="#skills" data-i18n="nav.skills">Skills</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
-        </nav>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
 
-        <div class="header-actions">
-          <div class="language-switcher" aria-label="Language selector">
-            <button class="lang-button active" data-lang="en">EN</button>
-            <span>/</span>
-            <button class="lang-button" data-lang="es">ES</button>
-          </div>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-          <a
-            href="mailto:fede.jacobo@protonmail.com"
-            class="header-contact"
-            data-i18n="nav.contactButton"
-          >
-            Contact
-          </a>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
 
-          <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            aria-label="Open menu"
-            aria-expanded="false"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
+            theme: {
+                extend: {
+
+                    colors: {
+                        surface: "#101415",
+                        "surface-dim": "#101415",
+                        "surface-bright": "#363a3b",
+
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container-low": "#191c1e",
+                        "surface-container": "#1d2022",
+                        "surface-container-high": "#272a2c",
+                        "surface-container-highest": "#323537",
+
+                        "on-surface": "#e0e3e5",
+                        "on-surface-variant": "#c7c4d7",
+
+                        outline: "#908fa0",
+                        "outline-variant": "#464554",
+
+                        primary: "#c0c1ff",
+                        "on-primary": "#1000a9",
+                        "primary-container": "#8083ff",
+                        "on-primary-container": "#0d0096",
+
+                        secondary: "#bec6e0",
+                        "secondary-container": "#3f465c",
+                        "on-secondary-container": "#adb4ce",
+
+                        tertiary: "#7bd0ff",
+                        "tertiary-container": "#009bd1",
+                        "on-tertiary": "#00354a",
+
+                        error: "#ffb4ab"
+                    },
+
+                    fontFamily: {
+                        mono: ["JetBrains Mono", "monospace"]
+                    },
+
+                    borderRadius: {
+                        sm: "0.25rem",
+                        DEFAULT: "0.5rem",
+                        md: "0.75rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+
+                    maxWidth: {
+                        "8xl": "1280px"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #101415;
+            color: #e0e3e5;
+            font-family: "JetBrains Mono", monospace;
+            overscroll-behavior: none;
+        }
+
+        ::selection {
+            background: #c0c1ff;
+            color: #1000a9;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #323537;
+            border-radius: 999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #464554;
+        }
+
+        .glass {
+            background: rgba(16, 20, 21, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .technical-border {
+            border: 1px solid #464554;
+        }
+
+        .ambient-shadow {
+            box-shadow:
+                0 16px 32px -12px rgba(192, 193, 255, 0.12);
+        }
+
+        .primary-glow {
+            box-shadow:
+                0 0 30px rgba(192, 193, 255, 0.10);
+        }
+
+        .grid-background {
+            background-image:
+                linear-gradient(rgba(70, 69, 84, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(70, 69, 84, 0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .code-line {
+            counter-increment: line;
+        }
+
+        .code-block {
+            counter-reset: line;
+        }
+
+        .code-line::before {
+            content: counter(line);
+            display: inline-block;
+            width: 24px;
+            margin-right: 16px;
+            color: #908fa0;
+            opacity: 0.55;
+            text-align: right;
+        }
+
+        .lang-button {
+            transition: all 0.2s ease;
+        }
+
+        .lang-button.active {
+            background: #c0c1ff;
+            color: #1000a9;
+        }
+
+        @media (max-width: 767px) {
+            .hero-title {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.02em;
+            }
+
+            .display-title {
+                font-size: 26px;
+                line-height: 34px;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="bg-surface text-on-surface">
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-outline-variant/30">
+
+        <div class="h-20 max-w-8xl mx-auto px-6 flex items-center justify-between">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="flex items-center gap-2" aria-label="Federico Jacobo - Inicio">
+
+                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-[20px]">
+                        bug_report
+                    </span>
+                </div>
+
+                <span class="text-lg font-bold tracking-tight">
+                    FJ.QA
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="hidden md:flex items-center gap-3">
+
+                <a href="index.html"
+                    class="px-3 py-2 text-xs bg-primary-container text-on-primary-container font-semibold rounded-lg"
+                    data-i18n="nav.home">
+                    Inicio
+                </a>
+
+                <a href="projects.html"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.projects">
+                    Proyectos
+                </a>
+
+                <a href="experience.html"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.experience">
+                    Experiencia
+                </a>
+
+                <a href="experience.html#skills"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.skills">
+                    Habilidades
+                </a>
+
+                <a href="#contact"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.contact">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <!-- Header actions -->
+
+            <div class="flex items-center gap-2">
+
+                <!-- Language -->
+
+                <div
+                    class="flex items-center gap-1 p-1 rounded-lg bg-surface-container-high border border-outline-variant/40">
+
+                    <button type="button" class="lang-button active px-2 py-1 rounded-md text-[10px] font-semibold"
+                        data-lang="es" aria-label="Español">
+                        ES
+                    </button>
+
+                    <button type="button"
+                        class="lang-button px-2 py-1 rounded-md text-[10px] font-semibold text-on-surface-variant"
+                        data-lang="en" aria-label="English">
+                        EN
+                    </button>
+
+                </div>
+
+
+                <!-- Theme -->
+
+                <button id="theme-toggle" type="button" aria-label="Cambiar tema"
+                    class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all">
+                    <span class="material-symbols-outlined text-[20px]">
+                        dark_mode
+                    </span>
+                </button>
+
+
+                <!-- Contact -->
+
+                <a href="mailto:fede.jacobo@protonmail.com"
+                    class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-medium tracking-wide hover:opacity-90 transition-all"
+                    data-i18n="nav.contactButton">
+                    Contactar
+                </a>
+
+
+                <!-- Profile icon -->
+
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1">
+
+                    <span class="material-symbols-outlined text-on-primary text-[18px]">
+                        person
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
 
-      <nav class="mobile-nav" id="mobileNav">
-        <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#experience" data-i18n="nav.experience">Experience</a>
-        <a href="#skills" data-i18n="nav.skills">Skills</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
     </header>
 
-    <main>
-      <!-- ================= HOME ================= -->
 
-      <section class="hero section" id="home">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <div class="eyebrow">
-              <span class="status-dot"></span>
-              <span data-i18n="hero.status">AVAILABLE FOR WORK</span>
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="pt-20 min-h-screen">
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="relative overflow-hidden bg-surface grid-background">
+
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none">
             </div>
 
-            <p class="location-line">Córdoba, Argentina</p>
-
-            <h1 data-i18n="hero.title">
-              IT Support <span>|</span> Manual QA <span>|</span> Game Testing
-            </h1>
-
-            <p class="hero-description" data-i18n="hero.description">
-              Higher Technician in Software Quality Assurance with professional
-              experience in Level 1 Technical Support and practical training in
-              Manual QA and Game Testing.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#projects" class="button button-primary">
-                <span data-i18n="hero.projectsButton">View Projects</span>
-                <span class="material-symbols-outlined">arrow_forward</span>
-              </a>
-
-              <a href="#experience" class="button button-secondary">
-                <span data-i18n="hero.experienceButton">View Experience</span>
-              </a>
+            <div class="absolute top-1/2 -left-40 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl pointer-events-none">
             </div>
 
-            <div class="hero-metrics">
-              <div class="metric">
-                <strong>L1</strong>
-                <span data-i18n="hero.metricSupport">Technical Support</span>
-              </div>
 
-              <div class="metric">
-                <strong>QA</strong>
-                <span data-i18n="hero.metricQA">Manual Testing</span>
-              </div>
+            <div
+                class="max-w-8xl mx-auto px-6 py-24 lg:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
-              <div class="metric">
-                <strong>B2</strong>
-                <span data-i18n="hero.metricEnglish">English</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Profile card -->
+                <!-- Hero text -->
 
-          <div class="hero-visual">
-            <div class="profile-card">
-              <div class="profile-card-top">
-                <span>profile.json</span>
-                <span class="file-status">●</span>
-              </div>
+                <div class="lg:col-span-7 flex flex-col items-start gap-6">
 
-              <div class="profile-photo-wrapper">
-                <div class="profile-placeholder" id="profilePlaceholder">
-                  FJ
+                    <!-- Status -->
+
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/50 text-on-surface-variant text-[10px] tracking-wide">
+
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+
+                        <span data-i18n="hero.status">
+                            DISPONIBLE LABORALMENTE
+                        </span>
+
+                    </div>
+
+
+                    <!-- Title -->
+
+                    <h1 class="hero-title text-[48px] leading-[56px] font-bold tracking-[-0.03em]"
+                        data-i18n="hero.title">
+                        Soporte Técnico IT | QA Manual | Technical Operations
+                    </h1>
+
+
+                    <!-- Description -->
+
+                    <p class="text-base leading-7 text-on-surface-variant max-w-2xl" data-i18n="hero.description">
+                        Técnico Superior en Calidad del Software con experiencia
+                        práctica en soporte técnico Nivel 1, monitoreo remoto,
+                        gestión de incidentes y resolución de problemas operativos.
+                    </p>
+
+
+                    <!-- Buttons -->
+
+                    <div class="flex flex-wrap items-center gap-3 pt-1">
+
+                        <a href="projects.html"
+                            class="px-6 py-3.5 rounded-xl bg-primary text-on-primary text-xs font-medium tracking-wide hover:opacity-90 transition-all ambient-shadow flex items-center gap-2"
+                            data-i18n="hero.projectsButton">
+                            Ver proyectos
+
+                            <span class="material-symbols-outlined text-[18px]">
+                                arrow_forward
+                            </span>
+                        </a>
+
+
+                        <a href="experience.html"
+                            class="px-6 py-3.5 rounded-xl bg-surface-container-high text-on-surface border border-outline-variant/50 text-xs font-medium tracking-wide hover:bg-surface-container-highest hover:border-primary/40 transition-all"
+                            data-i18n="hero.experienceButton">
+                            Ver experiencia
+                        </a>
+
+                    </div>
+
+
+                    <!-- Metrics -->
+
+                    <div class="grid grid-cols-3 gap-6 w-full pt-6 border-t border-surface-container-highest">
+
+                        <div>
+
+                            <div class="text-2xl font-bold text-primary">
+                                L1
+                            </div>
+
+                            <div class="text-[10px] text-on-surface-variant mt-1" data-i18n="hero.metricSupport">
+                                Soporte Técnico
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-2xl font-bold text-tertiary">
+                                QA
+                            </div>
+
+                            <div class="text-[10px] text-on-surface-variant mt-1" data-i18n="hero.metricQA">
+                                QA Manual
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="text-2xl font-bold text-on-surface">
+                                B2
+                            </div>
+
+                            <div class="text-[10px] text-on-surface-variant mt-1" data-i18n="hero.metricEnglish">
+                                Inglés · EF SET 54/100
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <img
-                  src="assets/images/profile.JPG"
-                  alt="Federico Jacobo"
-                  class="profile-photo"
-                  id="profilePhoto"
-                />
-              </div>
 
-              <div class="profile-code">
-                <pre><code><span class="code-keyword">const</span> federico = {
-  name: <span class="code-string">"Federico Jacobo"</span>,
-  location: <span class="code-string">"Córdoba, AR"</span>,
-  focus: [
-    <span class="code-string">"IT Support"</span>,
-    <span class="code-string">"Manual QA"</span>,
-    <span class="code-string">"Game Testing"</span>
-  ],
-  english: <span class="code-string">"B2"</span>
-};</code></pre>
-              </div>
+                <!-- Profile terminal -->
 
-              <div class="profile-status">
-                <span class="status-dot"></span>
-                <span data-i18n="hero.profileStatus">OPEN TO WORK</span>
-              </div>
+                <div class="lg:col-span-5 relative">
+
+                    <div
+                        class="relative w-full aspect-square rounded-3xl bg-surface-container-low p-2 technical-border ambient-shadow overflow-hidden">
+
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-tertiary/20">
+                        </div>
+
+
+                        <div
+                            class="w-full h-full rounded-2xl bg-surface-container-high flex flex-col justify-between p-6 relative overflow-hidden">
+
+
+                            <!-- Terminal header -->
+
+                            <div class="flex items-center justify-between">
+
+                                <div class="flex items-center gap-2">
+
+                                    <div class="w-3 h-3 rounded-full bg-error"></div>
+                                    <div class="w-3 h-3 rounded-full bg-tertiary"></div>
+                                    <div class="w-3 h-3 rounded-full bg-primary"></div>
+
+                                </div>
+
+                                <span class="text-[10px] text-on-surface-variant">
+                                    profile.json
+                                </span>
+
+                            </div>
+
+
+                            <!-- Code -->
+
+                            <div class="code-block text-xs leading-7 text-on-surface-variant">
+
+                                <p class="code-line text-primary">
+                                    const
+                                    <span class="text-on-surface">
+                                        federico
+                                    </span>
+                                    = {
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    name:
+                                    <span class="text-tertiary">
+                                        'Federico Jacobo'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    location:
+                                    <span class="text-tertiary">
+                                        'Córdoba, AR'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    role:
+                                    <span class="text-tertiary">
+                                        'IT Support / Manual QA'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    support:
+                                    <span class="text-tertiary">
+                                        'Level 1'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    monitoring:
+                                    <span class="text-tertiary">
+                                        'Remote'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    testing:
+                                    <span class="text-tertiary">
+                                        'Manual / Web / Game'
+                                    </span>,
+                                </p>
+
+                                <p class="code-line pl-4">
+                                    english:
+                                    <span class="text-tertiary">
+                                        'B2'
+                                    </span>
+                                </p>
+
+                                <p class="code-line text-primary">
+                                    };
+                                </p>
+
+                            </div>
+
+
+                            <!-- Status -->
+
+                            <div class="pt-4 flex items-center justify-between border-t border-surface-container">
+
+                                <span class="text-[10px] text-on-surface-variant tracking-wide"
+                                    data-i18n="hero.profileStatus">
+                                    ABIERTO A OPORTUNIDADES
+                                </span>
+
+                                <span class="material-symbols-outlined text-primary">
+                                    verified
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- ================= AREAS ================= -->
+        </section>
 
-      <section class="areas-section section-small">
-        <div class="container">
-          <div class="section-label">
-            <span>01</span>
-            <span data-i18n="areas.label">MAIN AREAS</span>
-          </div>
 
-          <div class="areas-grid">
-            <article class="area-card">
-              <span class="material-symbols-outlined">support_agent</span>
-              <div>
-                <h3 data-i18n="areas.support.title">IT Support</h3>
-                <p data-i18n="areas.support.text">
-                  Level 1 technical support, incident handling, troubleshooting
-                  and remote monitoring.
-                </p>
-              </div>
-            </article>
+        <!-- =====================================================
+             SKILLS STRIP
+        ====================================================== -->
 
-            <article class="area-card">
-              <span class="material-symbols-outlined">bug_report</span>
-              <div>
-                <h3 data-i18n="areas.qa.title">Manual QA</h3>
-                <p data-i18n="areas.qa.text">
-                  Test cases, functional testing, exploratory testing,
-                  compatibility and technical documentation.
-                </p>
-              </div>
-            </article>
+        <section class="w-full bg-surface-container-low border-y border-outline-variant/20">
 
-            <article class="area-card">
-              <span class="material-symbols-outlined">sports_esports</span>
-              <div>
-                <h3 data-i18n="areas.game.title">Game Testing</h3>
-                <p data-i18n="areas.game.text">
-                  Practical testing of a WebGL FPS game across browsers and
-                  different PC configurations.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+            <div class="max-w-8xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center gap-3">
 
-      <!-- ================= PROJECTS ================= -->
-
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <div class="section-label">
-                <span>02</span>
-                <span data-i18n="projects.label">PROJECTS</span>
-              </div>
-
-              <h2 data-i18n="projects.title">Manual QA Case Study</h2>
-            </div>
-
-            <p data-i18n="projects.intro">
-              A real academic QA project with documented planning, execution and
-              results.
-            </p>
-          </div>
-
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <span class="project-type" data-i18n="project.type">
-                  MANUAL QA / GAME TESTING
+                <span class="text-[10px] text-on-surface-variant uppercase tracking-wider mr-2" data-i18n="areas.label">
+                    Áreas principales:
                 </span>
-
-                <h3>Nazi Zombies: Portable</h3>
-
-                <p class="project-subtitle" data-i18n="project.subtitle">
-                  Manual QA Testing
-                </p>
-              </div>
-
-              <span class="project-number">01</span>
-            </div>
-
-            <div class="project-body">
-              <div class="project-description">
-                <p data-i18n="project.description">
-                  Manual QA project developed during my professional training at
-                  Teclab Instituto Técnico Superior. The objective was to test a
-                  WebGL FPS game through functional, exploratory, UI, usability,
-                  compatibility and basic performance testing.
-                </p>
-
-                <div class="tag-list">
-                  <span>Functional Testing</span>
-                  <span>Exploratory Testing</span>
-                  <span>UI Testing</span>
-                  <span>Usability Testing</span>
-                  <span>Compatibility</span>
-                  <span>Game Testing</span>
-                </div>
-              </div>
-
-              <div class="project-results">
-                <div class="result">
-                  <strong>32 / 32</strong>
-                  <span data-i18n="project.results.cases">
-                    Test cases passed
-                  </span>
-                </div>
-
-                <div class="result">
-                  <strong>0</strong>
-                  <span data-i18n="project.results.fail">
-                    Failed test cases
-                  </span>
-                </div>
-
-                <div class="result">
-                  <strong>3</strong>
-                  <span data-i18n="project.results.browsers">
-                    Browsers tested
-                  </span>
-                </div>
-
-                <div class="result">
-                  <strong>2</strong>
-                  <span data-i18n="project.results.devices">
-                    PC configurations
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-environments">
-              <div class="environment">
-                <div class="environment-title">
-                  <span class="material-symbols-outlined">computer</span>
-                  <span>Gigabyte G5 MD</span>
-                </div>
-
-                <p>Intel i5-11400H · RTX 3050 Ti 4GB · 40GB RAM · Windows 11</p>
-              </div>
-
-              <div class="environment">
-                <div class="environment-title">
-                  <span class="material-symbols-outlined">computer</span>
-                  <span>Positivo BGH AT550</span>
-                </div>
-
-                <p>Celeron N3350 · Intel HD 500 · 4GB RAM · Windows 10</p>
-              </div>
-            </div>
-
-            <div class="project-footer">
-              <div class="documentation-title">
-                <span class="material-symbols-outlined">description</span>
-                <span data-i18n="project.docsTitle"> Documentation </span>
-              </div>
-
-              <div class="documentation-links">
-                <a
-                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span data-i18n="project.docs.repository">
-                    QA Repository
-                  </span>
-                  <span class="material-symbols-outlined">open_in_new</span>
-                </a>
-
-                <a
-                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/01-test-plan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Test Plan
-                </a>
-
-                <a
-                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/03-test-cases"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Test Cases
-                </a>
-
-                <a
-                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/05-test-execution"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Test Execution
-                </a>
-
-                <a
-                  href="https://github.com/federicojacobo02/portfolio/tree/main/qa/nazi-zombies-portable/06-test-summary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Test Summary
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ================= EXPERIENCE ================= -->
-
-      <section class="section section-alt" id="experience">
-        <div class="container">
-          <div class="section-label">
-            <span>03</span>
-            <span data-i18n="experience.label">EXPERIENCE</span>
-          </div>
-
-          <div class="section-heading simple-heading">
-            <h2 data-i18n="experience.title">Professional Experience</h2>
-          </div>
-
-          <article class="experience-item featured-experience">
-            <div class="experience-date">
-              <span>SEP 2025</span>
-              <span>—</span>
-              <span>DEC 2025</span>
-            </div>
-
-            <div class="experience-main">
-              <div class="experience-title-row">
-                <div>
-                  <span
-                    class="experience-role"
-                    data-i18n="experience.robotic.role"
-                  >
-                    Roboteer | Level 1 Technical Support
-                  </span>
-
-                  <h3>Robotic Crew</h3>
-
-                  <p data-i18n="experience.robotic.meta">Remote · Contractor</p>
-                </div>
-
-                <span class="experience-badge">L1</span>
-              </div>
-
-              <p
-                class="experience-description"
-                data-i18n="experience.robotic.description"
-              >
-                Remote monitoring and Level 1 technical support for autonomous
-                industrial floor-cleaning robots. I analyzed operational alerts,
-                followed troubleshooting procedures, attempted allowed recovery
-                actions, tracked incidents and documented actions for shift
-                continuity.
-              </p>
-
-              <div class="experience-tasks">
-                <span>InOrbit</span>
-                <span>Jira</span>
-                <span>Opsgenie</span>
-                <span>Confluence</span>
-                <span>Slack</span>
-                <span>Remote Monitoring</span>
-                <span>Troubleshooting</span>
-                <span>Incident Management</span>
-              </div>
-            </div>
-          </article>
-
-          <div class="additional-experience">
-            <h3 data-i18n="experience.additional.title">
-              Additional Experience
-            </h3>
-
-            <div class="additional-grid">
-              <article>
-                <span class="additional-year">2024–2026</span>
-                <h4 data-i18n="experience.additional.barman.title">Barman</h4>
-                <p data-i18n="experience.additional.barman.text">
-                  Events and gastronomy, including Cosquín Rock.
-                </p>
-              </article>
-
-              <article>
-                <span class="additional-year">2022</span>
-                <h4 data-i18n="experience.additional.msi.title">
-                  Warehouse Assistant
-                </h4>
-                <p data-i18n="experience.additional.msi.text">
-                  MSI Argentina — warehouse and material handling.
-                </p>
-              </article>
-
-              <article>
-                <span class="additional-year">2019</span>
-                <h4 data-i18n="experience.additional.flexcel.title">
-                  Customer Service
-                </h4>
-                <p data-i18n="experience.additional.flexcel.text">
-                  Flexcel — customer service and cellphone-related tasks.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SKILLS ================= -->
-
-      <section class="section" id="skills">
-        <div class="container">
-          <div class="section-label">
-            <span>04</span>
-            <span data-i18n="skills.label">SKILLS</span>
-          </div>
-
-          <div class="section-heading">
-            <h2 data-i18n="skills.title">Technical Skills</h2>
-
-            <p data-i18n="skills.intro">
-              Knowledge levels are shown to distinguish practical experience
-              from academic or introductory knowledge.
-            </p>
-          </div>
-
-          <div class="skills-grid">
-            <!-- IT SUPPORT -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">build</span>
-                <h3 data-i18n="skills.support.title">IT Support</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>Windows</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Windows Installation</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Hardware</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>PC Assembly</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Linux</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Virtual Machines</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Android</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>iOS</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-              </div>
-            </article>
-
-            <!-- NETWORKING -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">lan</span>
-                <h3 data-i18n="skills.network.title">Networking</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>IP</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>DNS</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>DHCP</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>TCP/IP</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Wi-Fi</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>Routers</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>VPN</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Network Troubleshooting</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-              </div>
-            </article>
-
-            <!-- QA -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">bug_report</span>
-                <h3 data-i18n="skills.qa.title">Manual QA</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>Manual Testing</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Test Case Design</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Test Case Execution</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Functional Testing</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Exploratory Testing</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>UI / Usability Testing</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>Browser Compatibility</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>Game Testing</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-              </div>
-            </article>
-
-            <!-- TOOLS -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">terminal</span>
-                <h3 data-i18n="skills.tools.title">Tools</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>Jira</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Opsgenie</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>InOrbit</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Confluence</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>Excel / Google Sheets</span>
-                  <strong data-level="basic-intermediate"
-                    >Basic / Intermediate</strong
-                  >
-                </div>
-
-                <div class="skill-row">
-                  <span>Browser DevTools</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Git / GitHub</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-              </div>
-            </article>
-
-            <!-- PROGRAMMING -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">code</span>
-                <h3 data-i18n="skills.programming.title">Programming</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>C#</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Python</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>HTML</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>CSS</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>JavaScript</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>SQL</span>
-                  <strong data-level="basic">Basic</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>APIs</span>
-                  <strong data-level="introductory">Introductory</strong>
-                </div>
-              </div>
-            </article>
-
-            <!-- OTHER -->
-
-            <article class="skill-category">
-              <div class="skill-category-header">
-                <span class="material-symbols-outlined">school</span>
-                <h3 data-i18n="skills.other.title">Other</h3>
-              </div>
-
-              <div class="skill-list">
-                <div class="skill-row">
-                  <span>Technical Documentation</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>SOP / Procedures</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Incident Management</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Remote Monitoring</span>
-                  <strong data-level="intermediate">Intermediate</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>English</span>
-                  <strong data-level="b2">B2</strong>
-                </div>
-
-                <div class="skill-row">
-                  <span>Portuguese</span>
-                  <strong data-level="a1">A1</strong>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="skill-levels">
-            <span data-i18n="skills.levels">
-              Levels: Introductory · Basic · Intermediate · Advanced · Expert
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= EDUCATION ================= -->
-
-      <section class="section section-alt" id="education">
-        <div class="container">
-          <div class="section-label">
-            <span>05</span>
-            <span data-i18n="education.label">EDUCATION</span>
-          </div>
-
-          <div class="section-heading simple-heading">
-            <h2 data-i18n="education.title">Education</h2>
-          </div>
-
-          <div class="education-list">
-            <article class="education-item education-current">
-              <div class="education-year">2023–2026</div>
-
-              <div class="education-content">
-                <span class="education-status" data-i18n="education.completed">
-                  COMPLETED
-                </span>
-
-                <h3 data-i18n="education.teclab.title">
-                  Higher Technician in Software Quality Assurance
-                </h3>
-
-                <p>Teclab Instituto Técnico Superior</p>
 
                 <span
-                  class="education-detail"
-                  data-i18n="education.teclab.detail"
-                >
-                  Completed August 2026
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Soporte Técnico L1
                 </span>
-              </div>
-            </article>
 
-            <article class="education-item">
-              <div class="education-year">2025</div>
-
-              <div class="education-content">
                 <span
-                  class="education-status incomplete"
-                  data-i18n="education.incomplete"
-                >
-                  INCOMPLETE
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Manual QA
                 </span>
 
-                <h3 data-i18n="education.upc.title">
-                  University Technician in Video Game Development and Production
-                </h3>
-
-                <p>Universidad Provincial de Córdoba</p>
-              </div>
-            </article>
-
-            <article class="education-item">
-              <div class="education-year">2017–2019</div>
-
-              <div class="education-content">
                 <span
-                  class="education-status incomplete"
-                  data-i18n="education.incomplete"
-                >
-                  INCOMPLETE
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Monitoring
                 </span>
 
-                <h3 data-i18n="education.ies.title">
-                  Virtual Simulations and Video Games
-                </h3>
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Incident Management
+                </span>
 
-                <p>Colegio Universitario IES</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Game Testing
+                </span>
 
-      <!-- ================= CONTACT ================= -->
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Jira
+                </span>
 
-      <section class="section contact-section" id="contact">
-        <div class="container">
-          <div class="contact-box">
-            <div class="section-label">
-              <span>06</span>
-              <span data-i18n="contact.label">CONTACT</span>
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    InOrbit
+                </span>
+
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Opsgenie
+                </span>
+
+                <span
+                    class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 text-on-surface text-[10px]">
+                    Confluence
+                </span>
+
             </div>
 
-            <h2 data-i18n="contact.title">Let's talk about technical work.</h2>
+        </section>
 
-            <p data-i18n="contact.text">
-              I am interested in IT Support, Manual QA, Game Testing, Monitoring
-              and other junior technical roles.
-            </p>
 
-            <div class="contact-actions">
-              <a
-                href="mailto:fede.jacobo@protonmail.com"
-                class="button button-primary"
-              >
-                <span>fede.jacobo@protonmail.com</span>
-                <span class="material-symbols-outlined">mail</span>
-              </a>
+        <!-- =====================================================
+             FEATURED PROJECT
+        ====================================================== -->
 
-              <a
-                href="https://github.com/federicojacobo02"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button button-secondary"
-              >
-                <span>GitHub</span>
-                <span class="material-symbols-outlined">open_in_new</span>
-              </a>
+        <section class="w-full py-24 bg-surface">
+
+            <div class="max-w-8xl mx-auto px-6">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+
+                    <div>
+
+                        <span class="text-[10px] text-primary uppercase tracking-wider mb-2 block"
+                            data-i18n="projects.label">
+                            PROYECTOS
+                        </span>
+
+                        <h2 class="display-title text-[28px] leading-9 font-semibold" data-i18n="projects.title">
+                            Caso de estudio de QA Manual
+                        </h2>
+
+                        <p class="text-xs text-on-surface-variant mt-3 max-w-2xl" data-i18n="projects.intro">
+                            Proyecto académico real de QA con planificación,
+                            ejecución y resultados documentados.
+                        </p>
+
+                    </div>
+
+
+                    <a href="projects.html" class="inline-flex items-center gap-2 text-primary text-xs hover:underline">
+
+                        <span data-i18n="projects.viewAll">
+                            Ver todos los proyectos
+                        </span>
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            arrow_forward
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Project card -->
+
+                <article
+                    class="grid grid-cols-1 lg:grid-cols-12 rounded-3xl overflow-hidden bg-surface-container-low technical-border ambient-shadow">
+
+
+                    <!-- Visual -->
+
+                    <div
+                        class="lg:col-span-5 min-h-[360px] relative bg-surface-container-high grid-background flex items-center justify-center">
+
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-tertiary/10">
+                        </div>
+
+
+                        <div class="relative z-10 w-[82%] rounded-2xl bg-surface-container technical-border p-5">
+
+                            <div class="flex items-center justify-between mb-5">
+
+                                <span class="text-[10px] text-on-surface-variant">
+                                    QA_EXECUTION
+                                </span>
+
+                                <span class="text-[10px] text-tertiary">
+                                    WEBGL
+                                </span>
+
+                            </div>
+
+
+                            <div class="space-y-3 text-[10px]">
+
+                                <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+
+                                    <span class="text-on-surface-variant">
+                                        Test Plan
+                                    </span>
+
+                                    <span class="text-primary">
+                                        COMPLETE
+                                    </span>
+
+                                </div>
+
+
+                                <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+
+                                    <span class="text-on-surface-variant">
+                                        Test Cases
+                                    </span>
+
+                                    <span class="text-primary">
+                                        EXECUTED
+                                    </span>
+
+                                </div>
+
+
+                                <div class="flex justify-between border-b border-outline-variant/30 pb-2">
+
+                                    <span class="text-on-surface-variant">
+                                        Evidence
+                                    </span>
+
+                                    <span class="text-primary">
+                                        RECORDED
+                                    </span>
+
+                                </div>
+
+
+                                <div class="flex justify-between">
+
+                                    <span class="text-on-surface-variant">
+                                        Summary
+                                    </span>
+
+                                    <span class="text-primary">
+                                        COMPLETE
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Content -->
+
+                    <div class="lg:col-span-7 p-8 lg:p-10 flex flex-col justify-center gap-5">
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-primary/10 text-primary border border-primary/20 text-[10px]"
+                                data-i18n="project.type">
+                                QA MANUAL / GAME TESTING
+                            </span>
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-tertiary/10 text-tertiary border border-tertiary/20 text-[10px]">
+                                WebGL
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-2xl font-semibold">
+                            Nazi Zombies: Portable
+                        </h3>
+
+
+                        <p class="text-xs text-primary">
+                            Teclab Instituto Técnico Superior ·
+                            <span data-i18n="project.subtitle">
+                                Práctica Profesionalizante
+                            </span>
+                            · Julio 2026
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-on-surface-variant max-w-2xl" data-i18n="project.description">
+                            Proyecto de QA Manual realizado durante mi formación
+                            profesional en Teclab Instituto Técnico Superior.
+                            El objetivo fue probar un videojuego FPS WebGL
+                            mediante testing funcional, exploratorio, de UI,
+                            usabilidad, compatibilidad y rendimiento básico.
+                        </p>
+
+
+                        <p class="text-sm leading-7 text-on-surface-variant max-w-2xl" data-i18n="project.validation">
+                            Se realizaron validaciones en Chrome, Firefox y Edge
+                            utilizando equipos con diferentes capacidades de
+                            hardware, registrando resultados, evidencias y
+                            observaciones.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2 pt-1">
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                Chrome
+                            </span>
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                Firefox
+                            </span>
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                Edge
+                            </span>
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                Test Cases
+                            </span>
+
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                Test Documentation
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-3">
+
+                            <a href="projects.html"
+                                class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high border border-outline-variant text-on-surface text-xs hover:bg-surface-container-highest hover:border-primary/50 transition-all">
+
+                                <span data-i18n="project.viewCase">
+                                    Ver caso de estudio
+                                </span>
+
+                                <span class="material-symbols-outlined text-[16px]">
+                                    arrow_outward
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
             </div>
-          </div>
-        </div>
-      </section>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCE PREVIEW
+        ====================================================== -->
+
+        <section class="w-full py-24 bg-surface-container-low">
+
+            <div class="max-w-8xl mx-auto px-6">
+
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+
+                    <div>
+
+                        <span class="text-[10px] text-primary uppercase tracking-wider mb-2 block"
+                            data-i18n="experience.label">
+                            EXPERIENCIA
+                        </span>
+
+                        <h2 class="display-title text-[28px] leading-9 font-semibold" data-i18n="experience.title">
+                            Experiencia Profesional
+                        </h2>
+
+                    </div>
+
+
+                    <a href="experience.html"
+                        class="inline-flex items-center gap-2 text-primary text-xs hover:underline">
+
+                        <span data-i18n="experience.viewFull">
+                            Ver trayectoria completa
+                        </span>
+
+                        <span class="material-symbols-outlined text-[16px]">
+                            arrow_forward
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <article class="rounded-2xl bg-surface-container technical-border p-6 lg:p-8">
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                        <div class="lg:col-span-3">
+
+                            <span class="text-[10px] text-on-surface-variant">
+                                SEP 2025 — DIC 2025
+                            </span>
+
+                            <div class="mt-3 text-xs text-primary" data-i18n="experience.robotic.meta">
+                                Remoto · Contractor
+                            </div>
+
+                        </div>
+
+
+                        <div class="lg:col-span-9">
+
+                            <p class="text-xs text-on-surface-variant mb-2">
+                                Robotic Crew
+                            </p>
+
+                            <h3 class="text-xl font-semibold mb-4" data-i18n="experience.robotic.role">
+                                Roboteer | Soporte Técnico Nivel 1
+                            </h3>
+
+
+                            <p class="text-sm leading-7 text-on-surface-variant max-w-3xl"
+                                data-i18n="experience.robotic.description">
+                                Monitoreo remoto y soporte técnico Nivel 1 para
+                                robots autónomos de limpieza de pisos industriales.
+                                Analizaba alertas operativas, seguía procedimientos
+                                de troubleshooting, intentaba acciones de recuperación
+                                permitidas, realizaba seguimiento de incidentes y
+                                documentaba las acciones para la continuidad del turno.
+                            </p>
+
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                    InOrbit
+                                </span>
+
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                    Jira
+                                </span>
+
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                    Opsgenie
+                                </span>
+
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                    Confluence
+                                </span>
+
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant text-[10px]">
+                                    Troubleshooting
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AREAS
+        ====================================================== -->
+
+        <section class="w-full py-24 bg-surface">
+
+            <div class="max-w-8xl mx-auto px-6">
+
+                <div class="mb-12">
+
+                    <span class="text-[10px] text-primary uppercase tracking-wider mb-2 block" data-i18n="areas.label">
+                        ÁREAS PRINCIPALES
+                    </span>
+
+                    <h2 class="display-title text-[28px] leading-9 font-semibold" data-i18n="skills.title">
+                        Habilidades Técnicas
+                    </h2>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                    <!-- IT Support -->
+
+                    <article
+                        class="rounded-2xl bg-surface-container-low technical-border p-6 hover:bg-surface-container transition-all">
+
+                        <div
+                            class="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+
+                            <span class="material-symbols-outlined text-primary">
+                                support_agent
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-lg font-semibold mb-3" data-i18n="areas.support.title">
+                            IT Support
+                        </h3>
+
+
+                        <p class="text-xs leading-6 text-on-surface-variant mb-5" data-i18n="areas.support.text">
+                            Soporte Técnico Nivel 1, gestión de incidentes,
+                            troubleshooting y monitoreo remoto.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Windows
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Hardware
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Redes básicas
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Linux básico
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- QA -->
+
+                    <article
+                        class="rounded-2xl bg-surface-container-low technical-border p-6 hover:bg-surface-container transition-all">
+
+                        <div
+                            class="w-10 h-10 rounded-lg bg-tertiary/10 border border-tertiary/20 flex items-center justify-center mb-5">
+
+                            <span class="material-symbols-outlined text-tertiary">
+                                fact_check
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-lg font-semibold mb-3" data-i18n="areas.qa.title">
+                            Manual QA
+                        </h3>
+
+
+                        <p class="text-xs leading-6 text-on-surface-variant mb-5" data-i18n="areas.qa.text">
+                            Casos de prueba, testing funcional,
+                            testing exploratorio, compatibilidad
+                            y documentación técnica.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Test Plans
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Test Cases
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Web Testing
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Game Testing
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Game Testing -->
+
+                    <article
+                        class="rounded-2xl bg-surface-container-low technical-border p-6 hover:bg-surface-container transition-all">
+
+                        <div
+                            class="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-5">
+
+                            <span class="material-symbols-outlined text-primary">
+                                sports_esports
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-lg font-semibold mb-3" data-i18n="areas.game.title">
+                            Game Testing
+                        </h3>
+
+
+                        <p class="text-xs leading-6 text-on-surface-variant mb-5" data-i18n="areas.game.text">
+                            Testing práctico de un videojuego FPS WebGL
+                            en distintos navegadores y configuraciones de PC.
+                        </p>
+
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                WebGL
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Chrome
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Firefox
+                            </span>
+
+                            <span
+                                class="px-2 py-1 rounded-md bg-surface-container-high text-[10px] text-on-surface-variant">
+                                Edge
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA / CONTACT
+        ====================================================== -->
+
+        <section id="contact" class="w-full py-24 bg-surface-container-low relative overflow-hidden">
+
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-tertiary/5"></div>
+
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 flex flex-col items-center gap-6">
+
+                <span class="text-[10px] text-primary uppercase tracking-wider" data-i18n="contact.label">
+                    CONTACTO
+                </span>
+
+
+                <h2 class="text-[28px] leading-9 font-semibold" data-i18n="contact.title">
+                    Hablemos de trabajo técnico.
+                </h2>
+
+
+                <p class="text-sm leading-7 text-on-surface-variant max-w-2xl" data-i18n="contact.text">
+                    Me interesan posiciones de IT Support, QA Manual,
+                    Game Testing, Monitoring y otros roles técnicos junior.
+                </p>
+
+
+                <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+
+                    <a href="mailto:fede.jacobo@protonmail.com"
+                        class="px-8 py-4 rounded-xl bg-primary text-on-primary text-xs font-medium hover:opacity-90 transition-all ambient-shadow">
+                        <span data-i18n="contact.emailButton">
+                            Enviar Correo
+                        </span>
+                    </a>
+
+
+                    <a href="experience.html"
+                        class="px-8 py-4 rounded-xl bg-surface-container-high border border-outline-variant text-on-surface text-xs hover:bg-surface-container-highest transition-all"
+                        data-i18n="contact.experienceButton">
+                        Ver Experiencia
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>FJ<span>.</span>QA</strong>
-          <p data-i18n="footer.description">
-            IT Support · Manual QA · Game Testing
-          </p>
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="w-full bg-surface-container-low border-t border-outline-variant/20">
+
+        <div class="max-w-8xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+            <div class="flex items-center gap-3">
+
+                <span class="font-bold text-sm">
+                    FJ.QA
+                </span>
+
+                <span class="text-xs text-on-surface-variant" data-i18n="footer.description">
+                    IT Support · Manual QA · Game Testing
+                </span>
+
+            </div>
+
+
+            <div class="flex items-center gap-5 text-on-surface-variant">
+
+                <a href="mailto:fede.jacobo@protonmail.com" class="hover:text-primary transition-colors"
+                    aria-label="Email">
+                    <span class="material-symbols-outlined text-[20px]">
+                        alternate_email
+                    </span>
+                </a>
+
+
+                <a href="https://github.com/federicojacobo02" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-primary transition-colors" aria-label="GitHub">
+                    <span class="material-symbols-outlined text-[20px]">
+                        terminal
+                    </span>
+                </a>
+
+
+                <a href="https://linkedin.com/in/fedejacobo02" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-primary transition-colors" aria-label="LinkedIn">
+                    <span class="material-symbols-outlined text-[20px]">
+                        public
+                    </span>
+                </a>
+
+            </div>
+
+
+            <p class="text-xs text-on-surface-variant">
+                © 2026 Federico Jacobo
+            </p>
+
         </div>
 
-        <div class="footer-links">
-          <a href="mailto:fede.jacobo@protonmail.com"> Email </a>
-
-          <a
-            href="https://github.com/federicojacobo02"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
-
-        <div class="footer-copy">© 2026 Federico Jacobo</div>
-      </div>
     </footer>
+
+
+    <!-- Existing site scripts -->
 
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
-  </body>
+
+</body>
+
 </html>
+```

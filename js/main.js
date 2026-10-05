@@ -5,7 +5,7 @@
 
 /* ================= LANGUAGE ================= */
 
-const defaultLanguage = "en";
+const defaultLanguage = "es";
 
 let currentLanguage =
   localStorage.getItem("portfolioLanguage") || defaultLanguage;

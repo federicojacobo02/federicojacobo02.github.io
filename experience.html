@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="experience.pageTitle">
+        Experiencia | Federico Jacobo
+    </title>
+
+    <meta name="description" content="Experiencia profesional, educación y competencias técnicas de Federico Jacobo."
+        data-i18n="experience.metaDescription">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+
+            theme: {
+                extend: {
+
+                    colors: {
+                        surface: "#101415",
+                        "surface-dim": "#101415",
+                        "surface-bright": "#363a3b",
+
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container-low": "#191c1e",
+                        "surface-container": "#1d2022",
+                        "surface-container-high": "#272a2c",
+                        "surface-container-highest": "#323537",
+
+                        "on-surface": "#e0e3e5",
+                        "on-surface-variant": "#c7c4d7",
+
+                        outline: "#908fa0",
+                        "outline-variant": "#464554",
+
+                        primary: "#c0c1ff",
+                        "on-primary": "#1000a9",
+                        "primary-container": "#8083ff",
+                        "on-primary-container": "#0d0096",
+
+                        secondary: "#bec6e0",
+                        "secondary-container": "#3f465c",
+                        "on-secondary-container": "#adb4ce",
+
+                        tertiary: "#7bd0ff",
+                        "tertiary-container": "#009bd1",
+                        "on-tertiary": "#00354a",
+
+                        error: "#ffb4ab"
+                    },
+
+                    fontFamily: {
+                        mono: ["JetBrains Mono", "monospace"]
+                    },
+
+                    borderRadius: {
+                        sm: "0.25rem",
+                        DEFAULT: "0.5rem",
+                        md: "0.75rem",
+                        lg: "1rem",
+                        xl: "1.5rem",
+                        full: "9999px"
+                    },
+
+                    maxWidth: {
+                        "8xl": "1280px"
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #101415;
+            color: #e0e3e5;
+            font-family: "JetBrains Mono", monospace;
+            overscroll-behavior: none;
+        }
+
+        ::selection {
+            background: #c0c1ff;
+            color: #1000a9;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #101415;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #323537;
+            border-radius: 999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #464554;
+        }
+
+        .glass {
+            background: rgba(16, 20, 21, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .technical-border {
+            border: 1px solid #464554;
+        }
+
+        .ambient-shadow {
+            box-shadow:
+                0 16px 32px -12px rgba(192, 193, 255, 0.12);
+        }
+
+        .primary-glow {
+            box-shadow:
+                0 0 30px rgba(192, 193, 255, 0.10);
+        }
+
+        .grid-background {
+            background-image:
+                linear-gradient(rgba(70, 69, 84, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(70, 69, 84, 0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .code-line {
+            counter-increment: line;
+        }
+
+        .code-block {
+            counter-reset: line;
+        }
+
+        .code-line::before {
+            content: counter(line);
+            display: inline-block;
+            width: 24px;
+            margin-right: 16px;
+            color: #908fa0;
+            opacity: 0.55;
+            text-align: right;
+        }
+
+        .lang-button {
+            transition: all 0.2s ease;
+        }
+
+        .lang-button.active {
+            background: #c0c1ff;
+            color: #1000a9;
+        }
+
+        @media (max-width: 767px) {
+            .hero-title {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.02em;
+            }
+
+            .display-title {
+                font-size: 26px;
+                line-height: 34px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-surface text-on-surface">
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="fixed top-0 left-0 w-full z-50 glass border-b border-outline-variant/30">
+
+        <div class="h-20 max-w-8xl mx-auto px-6 flex items-center justify-between">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="flex items-center gap-2" aria-label="Federico Jacobo - Inicio">
+
+                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-[20px]">
+                        bug_report
+                    </span>
+                </div>
+
+                <span class="text-lg font-bold tracking-tight">
+                    FJ.QA
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="hidden md:flex items-center gap-3">
+
+                <a href="index.html"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.home">
+                    Inicio
+                </a>
+
+                <a href="projects.html"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.projects">
+                    Proyectos
+                </a>
+
+                <a href="experience.html"
+                    class="px-3 py-2 text-xs bg-primary-container text-on-primary-container font-semibold rounded-lg"
+                    data-i18n="nav.experience">
+                    Experiencia
+                </a>
+
+                <a href="experience.html#skills"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.skills">
+                    Habilidades
+                </a>
+
+                <a href="index.html#contact"
+                    class="px-3 py-2 text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all rounded-lg"
+                    data-i18n="nav.contact">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <!-- Header actions -->
+
+            <div class="flex items-center gap-2">
+
+                <!-- Language -->
+
+                <div
+                    class="flex items-center gap-1 p-1 rounded-lg bg-surface-container-high border border-outline-variant/40">
+
+                    <button type="button" class="lang-button active px-2 py-1 rounded-md text-[10px] font-semibold"
+                        data-lang="es" aria-label="Español">
+                        ES
+                    </button>
+
+                    <button type="button"
+                        class="lang-button px-2 py-1 rounded-md text-[10px] font-semibold text-on-surface-variant"
+                        data-lang="en" aria-label="English">
+                        EN
+                    </button>
+
+                </div>
+
+
+                <!-- Theme -->
+
+                <button id="theme-toggle" type="button" aria-label="Cambiar tema"
+                    class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all">
+                    <span class="material-symbols-outlined text-[20px]">
+                        dark_mode
+                    </span>
+                </button>
+
+
+                <!-- Contact -->
+
+                <a href="mailto:fede.jacobo@protonmail.com"
+                    class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-medium tracking-wide hover:opacity-90 transition-all"
+                    data-i18n="nav.contactButton">
+                    Contactar
+                </a>
+
+
+                <!-- Profile icon -->
+
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1">
+
+                    <span class="material-symbols-outlined text-on-primary text-[18px]">
+                        person
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+    <main class="pt-20 min-h-screen">
+
+
+        <!-- =====================================================
+             PAGE HERO
+        ====================================================== -->
+
+        <section class="relative grid-background overflow-hidden bg-surface">
+
+            <div class="max-w-8xl mx-auto px-6 py-20 md:py-28">
+
+                <div class="max-w-4xl">
+
+                    <div class="section-label mb-6" data-i18n="experience.heroLabel">
+                        EXPERIENCIA / PERFIL
+                    </div>
+
+
+                    <h1 class="display-title mb-6 text-[36px] font-bold">
+
+                        <span data-i18n="experience.heroTitle">
+                            Experiencia
+                        </span>
+
+                        <span class="text-primary">
+                            &amp;
+                        </span>
+
+                        <span data-i18n="experience.heroTitleHighlight">
+                            Perfil Técnico
+                        </span>
+
+                    </h1>
+
+
+                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed max-w-3xl"
+                        data-i18n="experience.heroDescription">
+                        Experiencia en soporte técnico Nivel 1, monitoreo remoto,
+                        gestión de incidentes y testing manual, combinada con
+                        formación en calidad de software y fundamentos de tecnología.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROFESSIONAL EXPERIENCE
+        ====================================================== -->
+
+        <section class="max-w-8xl mx-auto px-6 py-16 bg-surface">
+
+            <div class="section-label mb-10" data-i18n="experience.professional.label">
+                01 / EXPERIENCIA PROFESIONAL
+            </div>
+
+
+            <div class="grid grid-cols-1 gap-8">
+
+                <div class="timeline">
+
+
+                    <!-- ROBOTIC CREW -->
+
+                    <article class="timeline-item pb-14">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="card p-6 md:p-8 bg-surface-container-low technical-border">
+
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+
+                                <div>
+
+                                    <p class="text-primary text-xs uppercase tracking-wider mb-2"
+                                        data-i18n="experience.robotic.category">
+                                        Soporte Técnico / Operaciones
+                                    </p>
+
+
+                                    <h2 class="text-xl md:text-2xl font-semibold" data-i18n="experience.robotic.role">
+                                        Roboteer | Soporte Técnico Nivel 1
+                                    </h2>
+
+
+                                    <p class="text-on-surface-variant text-sm mt-1">
+                                        Robotic Crew
+                                    </p>
+
+                                </div>
+
+
+                                <div class="text-left md:text-right">
+
+                                    <span class="tech-tag" data-i18n="experience.robotic.meta">
+                                        REMOTO · CONTRATISTA
+                                    </span>
+
+
+                                    <p class="text-on-surface-variant/60 text-xs mt-3"
+                                        data-i18n="experience.robotic.date">
+                                        Septiembre 2025 — Diciembre 2025
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6"
+                                data-i18n="experience.robotic.description">
+                                Monitoreo remoto y soporte técnico Nivel 1 para robots autónomos de limpieza de
+                                pisos industriales.
+                            </p>
+
+
+                            <!-- Responsibilities -->
+
+                            <ul class="space-y-3 text-sm text-on-surface-variant">
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet1">
+                                        Monitoreo remoto de robots autónomos y atención de alertas operativas.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet2">
+                                        Diagnóstico y resolución de incidentes Nivel 1 relacionados con rutas,
+                                        obstáculos, batería y memoria.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet3">
+                                        Aplicación de procedimientos de troubleshooting y documentación técnica.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet4">
+                                        Registro, seguimiento y documentación de incidentes mediante Jira.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet5">
+                                        Gestión de alertas mediante Opsgenie y monitoreo de robots mediante InOrbit.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet6">
+                                        Consulta de documentación técnica en Confluence para diagnóstico y resolución.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet7">
+                                        Seguimiento de incidentes pendientes y documentación del trabajo realizado
+                                        para continuidad entre turnos.
+                                    </span>
+                                </li>
+
+
+                                <li class="flex gap-3">
+                                    <span class="text-primary">›</span>
+                                    <span data-i18n="experience.robotic.bullet8">
+                                        Escalamiento de incidentes cuando la resolución excedía los procedimientos
+                                        disponibles.
+                                    </span>
+                                </li>
+
+                            </ul>
+
+
+                            <!-- Tools -->
+
+                            <div class="mt-8 pt-6 border-t border-outline-variant/40">
+
+                                <p class="text-on-surface-variant/60 text-xs uppercase tracking-wider mb-3"
+                                    data-i18n="experience.robotic.toolsTitle">
+                                    Herramientas
+                                </p>
+
+
+                                <div class="flex flex-wrap gap-2">
+
+                                    <span class="tech-tag">Jira</span>
+                                    <span class="tech-tag">Confluence</span>
+                                    <span class="tech-tag">Opsgenie</span>
+                                    <span class="tech-tag">InOrbit</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ADDITIONAL EXPERIENCE -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="card p-6 md:p-8 bg-surface-container-low technical-border">
+
+                            <div class="mb-6">
+
+                                <p class="text-primary text-xs uppercase tracking-wider mb-2"
+                                    data-i18n="experience.additional.label">
+                                    EXPERIENCIA ADICIONAL
+                                </p>
+
+
+                                <h2 class="text-xl font-semibold" data-i18n="experience.additional.title">
+                                    Experiencia adicional
+                                </h2>
+
+                            </div>
+
+
+                            <div class="space-y-5">
+
+                                <!-- Barman -->
+
+                                <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+
+                                    <div>
+
+                                        <h3 class="text-sm font-semibold"
+                                            data-i18n="experience.additional.barman.title">
+                                            Barman
+                                        </h3>
+
+                                        <p class="text-on-surface-variant/60 text-xs mt-1"
+                                            data-i18n="experience.additional.barman.text">
+                                            Eventos y servicios gastronómicos
+                                        </p>
+
+                                    </div>
+
+
+                                    <span class="text-on-surface-variant/60 text-xs"
+                                        data-i18n="experience.additional.barman.date">
+                                        2024 — 2026
+                                    </span>
+
+                                </div>
+
+
+                                <div class="technical-divider"></div>
+
+
+                                <!-- MSI -->
+
+                                <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+
+                                    <div>
+
+                                        <h3 class="text-sm font-semibold" data-i18n="experience.additional.msi.title">
+                                            Auxiliar de Depósito
+                                        </h3>
+
+                                        <p class="text-on-surface-variant/60 text-xs mt-1"
+                                            data-i18n="experience.additional.msi.text">
+                                            MSI Argentina
+                                        </p>
+
+                                    </div>
+
+
+                                    <span class="text-on-surface-variant/60 text-xs"
+                                        data-i18n="experience.additional.msi.date">
+                                        2022
+                                    </span>
+
+                                </div>
+
+
+                                <div class="technical-divider"></div>
+
+
+                                <!-- Flexcel -->
+
+                                <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+
+                                    <div>
+
+                                        <h3 class="text-sm font-semibold"
+                                            data-i18n="experience.additional.flexcel.title">
+                                            Atención al Público
+                                        </h3>
+
+                                        <p class="text-on-surface-variant/60 text-xs mt-1"
+                                            data-i18n="experience.additional.flexcel.text">
+                                            Flexcel
+                                        </p>
+
+                                    </div>
+
+
+                                    <span class="text-on-surface-variant/60 text-xs"
+                                        data-i18n="experience.additional.flexcel.date">
+                                        2019
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section class="max-w-8xl mx-auto px-6 py-16 bg-surface">
+
+            <div class="section-label mb-10" data-i18n="education.label">
+                02 / EDUCACIÓN
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Main degree -->
+
+                <article class="lg:col-span-7 card card-featured p-6 md:p-8 bg-surface-container-low technical-border">
+
+                    <div class="flex items-start justify-between gap-4 mb-8">
+
+                        <div class="icon-box">
+                            <span class="text-sm">01</span>
+                        </div>
+
+
+                        <span class="tech-tag" data-i18n="education.completed">
+                            COMPLETADO
+                        </span>
+
+                    </div>
+
+
+                    <p class="text-primary text-xs uppercase tracking-wider mb-3" data-i18n="education.higher">
+                        Educación Superior
+                    </p>
+
+
+                    <h2 class="text-xl md:text-2xl font-semibold mb-3" data-i18n="education.teclab.title">
+                        Técnico Superior en Calidad del Software
+                    </h2>
+
+
+                    <p class="text-on-surface-variant text-sm mb-2">
+                        Teclab Instituto Técnico Superior
+                    </p>
+
+
+                    <p class="text-on-surface-variant/60 text-xs mb-8" data-i18n="education.teclab.detail">
+                        2023 — 2026 · Título obtenido en agosto de 2026
+                    </p>
+
+
+                    <p class="text-on-surface-variant text-sm leading-relaxed" data-i18n="education.teclab.description">
+                        Formación en calidad de software, testing manual, diseño y ejecución de casos de prueba,
+                        documentación de testing y procesos de desarrollo de software.
+                    </p>
+
+                </article>
+
+
+                <!-- Other studies -->
+
+                <div class="lg:col-span-5 space-y-6">
+
+                    <!-- UPC -->
+
+                    <article class="card p-6 bg-surface-container-low technical-border">
+
+                        <div class="flex justify-between items-start gap-4 mb-5">
+
+                            <div class="icon-box">
+                                <span class="text-xs">02</span>
+                            </div>
+
+
+                            <span class="tech-tag" data-i18n="education.incomplete">
+                                INCOMPLETO
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="education.upc.title">
+                            Tecnicatura Universitaria en Desarrollo y Producción de Videojuegos
+                        </h3>
+
+
+                        <p class="text-on-surface-variant text-sm">
+                            Universidad Provincial de Córdoba
+                        </p>
+
+
+                        <p class="text-on-surface-variant/60 text-xs mt-3" data-i18n="education.upc.detail">
+                            2025 · Estudios no finalizados
+                        </p>
+
+                    </article>
+
+
+                    <!-- IES -->
+
+                    <article class="card p-6 bg-surface-container-low technical-border">
+
+                        <div class="flex justify-between items-start gap-4 mb-5">
+
+                            <div class="icon-box">
+                                <span class="text-xs">03</span>
+                            </div>
+
+
+                            <span class="tech-tag" data-i18n="education.incomplete">
+                                INCOMPLETO
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="text-lg font-semibold mb-2" data-i18n="education.ies.title">
+                            Simulaciones Virtuales y Videojuegos
+                        </h3>
+
+
+                        <p class="text-on-surface-variant text-sm">
+                            Colegio Universitario IES
+                        </p>
+
+
+                        <p class="text-on-surface-variant/60 text-xs mt-3" data-i18n="education.ies.detail">
+                            2017 — 2019 · Estudios no finalizados
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
+
+        <section id="skills" class="max-w-8xl mx-auto px-6 py-16 scroll-mt-20 bg-surface">
+
+            <div class="section-label mb-10" data-i18n="skills.label">
+                03 / HABILIDADES TÉCNICAS
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+                <!-- IT Support -->
+
+                <article class="card p-6 bg-surface-container-low technical-border">
+
+                    <div class="icon-box mb-6">IT</div>
+
+
+                    <h2 class="text-lg font-semibold mb-5" data-i18n="skills.support.title">
+                        IT Support
+                    </h2>
+
+
+                    <ul class="flex flex-wrap gap-2">
+
+                        <li class="tech-tag" data-i18n="skills.support.technicalDocumentation">
+                            Documentación Técnica
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.incidentManagement">
+                            Gestión de Incidentes
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.hardware">
+                            Hardware
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.installationConfiguration">
+                            Instalación y Configuración
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.basicLinux">
+                            Linux Básico
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.virtualMachines">
+                            Máquinas Virtuales
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.pcMaintenance">
+                            Mantenimiento de PC
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.remoteMonitoring">
+                            Monitoreo Remoto
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.basicNetworking">
+                            Redes Básicas
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.level1Support">
+                            Soporte Técnico Nivel 1
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.sop">
+                            SOP
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.troubleshooting">
+                            Troubleshooting
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.support.windows">
+                            Windows
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- QA -->
+
+                <article class="card p-6 bg-surface-container-low technical-border">
+
+                    <div class="icon-box mb-6">QA</div>
+
+
+                    <h2 class="text-lg font-semibold mb-5" data-i18n="skills.qa.title">
+                        QA & Software Testing
+                    </h2>
+
+
+                    <ul class="flex flex-wrap gap-2">
+
+                        <li class="tech-tag" data-i18n="skills.qa.manualTesting">
+                            Testing Manual
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.testCaseDesign">
+                            Diseño de Casos de Prueba
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.testExecution">
+                            Ejecución de Casos de Prueba
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.functionalTesting">
+                            Pruebas Funcionales
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.exploratoryTesting">
+                            Testing Exploratorio
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.uiTesting">
+                            UI Testing
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.usabilityTesting">
+                            Usability Testing
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.compatibilityTesting">
+                            Compatibility Testing
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.basicPerformanceTesting">
+                            Basic Performance Testing
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.testPlans">
+                            Test Plans
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.testExecutionRecords">
+                            Test Execution Records
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.webTesting">
+                            Web Testing
+                        </li>
+
+                        <li class="tech-tag" data-i18n="skills.qa.gameTesting">
+                            Game Testing
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- Tools -->
+
+                <article class="card p-6 bg-surface-container-low technical-border">
+
+                    <div class="icon-box mb-6">
+                        <span class="text-xs">TOOLS</span>
+                    </div>
+
+
+                    <h2 class="text-lg font-semibold mb-5" data-i18n="skills.tools.title">
+                        Herramientas
+                    </h2>
+
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="tech-tag">Jira</span>
+                        <span class="tech-tag">Confluence</span>
+                        <span class="tech-tag">Opsgenie</span>
+                        <span class="tech-tag">InOrbit</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Google Sheets</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">GitHub</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Programming -->
+
+                <article class="card p-6 bg-surface-container-low technical-border">
+
+                    <div class="icon-box mb-6">
+                        <span class="text-xs">CODE</span>
+                    </div>
+
+
+                    <h2 class="text-lg font-semibold mb-5" data-i18n="skills.programming.title">
+                        Programación
+                    </h2>
+
+
+                    <div class="space-y-5">
+
+                        <!-- Python -->
+
+                        <div>
+
+                            <div class="flex justify-between mb-2 text-xs">
+                                <span>Python</span>
+                                <span class="text-on-surface-variant/60" data-i18n="skills.levels.basic">
+                                    Básico
+                                </span>
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 35%;"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- C# -->
+
+                        <div>
+
+                            <div class="flex justify-between mb-2 text-xs">
+                                <span>C#</span>
+                                <span class="text-on-surface-variant/60" data-i18n="skills.levels.basic">
+                                    Básico
+                                </span>
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 30%;"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- SQL -->
+
+                        <div>
+
+                            <div class="flex justify-between mb-2 text-xs">
+                                <span>SQL</span>
+                                <span class="text-on-surface-variant/60" data-i18n="skills.levels.basic">
+                                    Básico
+                                </span>
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 30%;"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- HTML / CSS / JS -->
+
+                        <div>
+
+                            <div class="flex justify-between mb-2 text-xs">
+                                <span>HTML / CSS / JS</span>
+                                <span class="text-on-surface-variant/60" data-i18n="skills.levels.basic">
+                                    Básico
+                                </span>
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 30%;"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CERTIFICATIONS & LANGUAGES
+        ====================================================== -->
+
+        <section class="max-w-8xl mx-auto px-6 py-16 bg-surface">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                <!-- Courses -->
+
+                <article class="card p-6 md:p-8 bg-surface-container-low technical-border">
+
+                    <div class="section-label mb-8" data-i18n="certifications.title">
+                        CERTIFICACIONES / CURSOS
+                    </div>
+
+
+                    <div class="space-y-5 text-on-surface-variant">
+
+                        <div>
+                            <h3 class="text-sm font-semibold text-on-surface" data-i18n="certifications.qaIntro">
+                                Introducción a QA
+                            </h3>
+
+                            <p class="text-on-surface-variant/60 text-xs mt-1">
+                                EGG · 2023
+                            </p>
+                        </div>
+
+
+                        <div class="technical-divider"></div>
+
+
+                        <div>
+                            <h3 class="text-sm font-semibold text-on-surface" data-i18n="certifications.manualTesting">
+                                Testing Manual
+                            </h3>
+
+                            <p class="text-on-surface-variant/60 text-xs mt-1">
+                                EGG · 2023
+                            </p>
+                        </div>
+
+
+                        <div class="technical-divider"></div>
+
+
+                        <div>
+                            <h3 class="text-sm font-semibold text-on-surface" data-i18n="certifications.programming">
+                                Fundamentos de Programación
+                            </h3>
+
+                            <p class="text-on-surface-variant/60 text-xs mt-1">
+                                Educación IT · 2023
+                            </p>
+                        </div>
+
+
+                        <div class="technical-divider"></div>
+
+
+                        <div>
+                            <h3 class="text-sm font-semibold text-on-surface">
+                                #SeProgramá
+                            </h3>
+
+                            <p class="text-on-surface-variant/60 text-xs mt-1">
+                                Argentina Programa · 2022
+                            </p>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Languages -->
+
+                <article class="card p-6 md:p-8 bg-surface-container-low technical-border">
+
+                    <div class="section-label mb-8" data-i18n="languages.title">
+                        IDIOMAS
+                    </div>
+
+
+                    <div class="space-y-8">
+
+                        <!-- Spanish -->
+
+                        <div>
+
+                            <div class="flex justify-between items-center mb-3">
+
+                                <h3 class="text-sm font-semibold" data-i18n="languages.spanish">
+                                    Español
+                                </h3>
+
+                                <span class="tech-tag" data-i18n="languages.native">
+                                    NATIVO
+                                </span>
+
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 100%;"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- English -->
+
+                        <div>
+
+                            <div class="flex justify-between items-center mb-3">
+
+                                <div>
+
+                                    <h3 class="text-sm font-semibold" data-i18n="languages.english">
+                                        Inglés
+                                    </h3>
+
+                                    <p class="text-on-surface-variant/60 text-xs mt-1">
+                                        EF SET · 54/100
+                                    </p>
+
+                                </div>
+
+                                <span class="tech-tag" data-i18n="languages.englishLevel">
+                                    B2
+                                </span>
+
+                            </div>
+
+
+                            <div class="h-1 bg-surface-highest rounded-full">
+                                <div class="h-1 bg-primary rounded-full" style="width: 65%;"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="max-w-8xl mx-auto px-6 py-20 bg-surface">
+
+            <div
+                class="card card-featured p-8 md:p-12 relative overflow-hidden bg-surface-container-low technical-border">
+
+                <div class="absolute inset-0 pointer-events-none opacity-50 grid-background"></div>
+
+
+                <div class="relative z-10 max-w-3xl">
+
+                    <div class="section-label mb-6" data-i18n="contact.label">
+                        CONTACTO
+                    </div>
+
+
+                    <h2 class="display-title mb-5 text-[28px] font-semibold">
+
+                        <span data-i18n="contact.title">
+                            Hablemos de trabajo técnico.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed mb-8"
+                        data-i18n="contact.text">
+                        Me interesan posiciones de IT Support, QA Manual,
+                        Game Testing, Monitoring y otros roles técnicos junior.
+                    </p>
+
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <a href="mailto:fede.jacobo@protonmail.com"
+                            class="px-6 py-3.5 rounded-xl bg-primary text-on-primary text-xs font-medium tracking-wide hover:opacity-90 transition-all ambient-shadow"
+                            data-i18n="contact.emailButton">
+                            Contactar
+                        </a>
+
+
+                        <a href="index.html#projects"
+                            class="px-6 py-3.5 rounded-xl bg-surface-container-high text-on-surface border border-outline-variant/50 text-xs font-medium tracking-wide hover:bg-surface-container-highest transition-all"
+                            data-i18n="projects.viewAll">
+                            Ver proyectos
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="w-full bg-surface-container-low border-t border-outline-variant/20">
+
+        <div class="max-w-8xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+            <div class="flex items-center gap-3">
+
+                <span class="font-bold text-sm">
+                    FJ.QA
+                </span>
+
+                <span class="text-xs text-on-surface-variant" data-i18n="footer.description">
+                    IT Support · Manual QA · Game Testing
+                </span>
+
+            </div>
+
+
+            <div class="flex items-center gap-5 text-on-surface-variant">
+
+                <a href="mailto:fede.jacobo@protonmail.com" class="hover:text-primary transition-colors"
+                    aria-label="Email">
+
+                    <span class="material-symbols-outlined text-[20px]">
+                        alternate_email
+                    </span>
+
+                </a>
+
+
+                <a href="https://github.com/federicojacob02" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-primary transition-colors" aria-label="GitHub">
+
+                    <span class="material-symbols-outlined text-[20px]">
+                        terminal
+                    </span>
+
+                </a>
+
+
+                <a href="https://linkedin.com/in/fedejacobo02" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-primary transition-colors" aria-label="LinkedIn">
+
+                    <span class="material-symbols-outlined text-[20px]">
+                        public
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <p class="text-xs text-on-surface-variant">
+                © 2026 Federico Jacobo
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         SCRIPTS
+    ========================================================== -->
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
